@@ -3,6 +3,7 @@
 const n = parseInt(process.argv[2]);
 
 function factorial(x) {
+  if (isNaN(x) || x <= 1) return 1; // base case + invalid input
   return x * factorial(x - 1);
 }
 
